@@ -82,8 +82,10 @@ app.get("/demouser", async (req, res) => {
 
 
 app.use((req,res,next)=>{
-    res.locals.succmsg=req.flash("newAdd");
-    res.locals.error=req.flash("error");
+    res.locals.currUser = req.user;
+    res.locals.succmsg = req.flash("newAdd");
+    res.locals.error = req.flash("error");
+    res.locals.success = req.flash("success");
     next();
 })
     

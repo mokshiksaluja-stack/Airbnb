@@ -1,0 +1,131 @@
+body {
+    background-color: blanchedalmond;
+}
+
+/* Navbar */
+.navbar {
+    height: 5rem;
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar .container-fluid {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.fa-compass, .fa-compass::before {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none; /* let browser default/bundle handle it */
+}
+
+/* Footer */
+footer {
+    background: #efefef;
+    padding: 2.5rem 0;
+    margin-top: 2rem;
+}
+.f-info {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+.f-info-socials {
+    margin-bottom: 0.75rem;
+}
+.f-social {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    background: #222;
+    color: #fff;
+    margin: 0 6px;
+    border-radius: 4px;
+    text-align: center;
+}
+.f-info-copy {
+    font-size: 1.125rem;
+    margin: 0.75rem 0;
+    color: #222;
+}
+.f-info-links a {
+    color: #222;
+    margin: 0 0.6rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+/* Listing thumbnails and detail image */
+.listings-list {
+    margin-top: 1rem;
+}
+.listing-card {
+    overflow: hidden;
+}
+.listing-thumb {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+.listing-thumb {
+    transition: transform 0.25s ease;
+}
+.listing-title {
+    display: block;
+    margin-top: 0.5rem;
+}
+.listing-image {
+    width: 100%;
+    max-width: 900px;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1rem auto;
+    border-radius: 6px;
+}
+.listing-detail ul {
+    list-style: none;
+    padding: 0;
+}
+.listing-detail li {
+    margin: 0.5rem 0;
+}
+
+/* Overlay on card image using Bootstrap's .card-img-overlay */
+.card-img-overlay {
+    inset: 0 0 auto 0; /* ensure it sits over the img-top area */
+    background: rgba(0,0,0,0);
+    transition: background 0.25s ease;
+    pointer-events: none; /* allow clicks through overlay */
+}
+.listing-card:hover .card-img-overlay {
+    background: rgba(0,0,0,0.2);
+}
+.listing-card:hover .listing-thumb {
+    transform: scale(1.03);
+}
